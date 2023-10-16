@@ -1,0 +1,66 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+    <section class="One">
+        <div class="X-Full">
+            <h1> Elhyail Emplooes </h1>
+            <form method="post" action="">
+                <input pattern="[a-z][A-Z][0-9]"  type="search" placeholder="Search By Id or Username">
+            </form>
+        </div>
+        <div class="Full">
+            <table>
+                <thead>
+                    <th>
+                        <td> Id </td>
+                        <td> UserName </td>
+                        <td> Mobile Number </td>
+                        <td> Email </td>
+                        <td> Address </td>
+                        <td> Salary </td>
+                        <td> Birthday </td>
+                        <td> Gender </td>
+                        <td> Marital Statue </td>
+                        <td> Department </td>
+                        <td> Avaliable days of Vactions </td>
+                    </th>
+                </thead>
+                <tbody>
+                    {% for One in data %}
+                        <tr>
+                            <td> </td>
+                            <td> {{ One.Username }} </td>
+                            <td> {{ One.Mobile }} </td>
+                            <td> {{ One.Email }} </td>
+                            <td> {{ One.Address }} </td>
+                            <td> {{ One.Salary }} </td>
+                            <td> {{ One.Birthdate }} </td>
+                            <td> {{ One.Gender }} </td>
+                            <td> {{ One.Mstatue }} </td>
+                            <td> {{ One.Department }} </td>
+                            <td> {{ One.AviVacdays }} </td>
+                            <td>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <div>
+                                        <input type="number" value="{{One.id}}" style="display: none;" name="Id">
+                                        <input type="radio" id="Action1" value="Modify" name="Action" required>
+                                        <label for="Action1">Modify</label>
+                                        <br>
+                                        <input type="radio" id="Action2" value="Remove" name="Action" required>
+                                        <label for="Action2">Remove</label>
+                                        <br>
+                                        <input type="radio" id="Action3" value="rderVaction" name="Action" required>
+                                        <label for="Action3">Order Vaction</label>
+                                        <br>
+                                    </div>
+                                    <input type="submit" value="Confirm">
+                                </form>
+                            </td>   
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

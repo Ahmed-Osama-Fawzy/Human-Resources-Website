@@ -1,0 +1,21 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Forget-Remove.css') }}">
+{% endblock %}
+{% block HRNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<section class="Container">
+    <div class="Father">
+        <form method="POST" action="{{ url_for('RemoveHR') }}">
+            <div>
+                <label for="Id"> Enter The Id </label>
+                <input type="number" required name="Id" id="Id" placeholder="Write The Id">
+            </div>
+            <hr>
+            <input type="submit" value="Remove">
+        </form>
+    </div>
+</section>
+{% endblock %}

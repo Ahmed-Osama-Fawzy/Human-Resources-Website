@@ -1,0 +1,49 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+<section class="Two">
+    <div class="Half">
+        <img src="{% static 'image.jpg' %}">
+    </div>
+    <div class="Half">
+        <form method="post">
+            {% csrf_token %}
+            <label> Emploee Username </label>
+            <input type="text" name="Username" required>
+            <label> Update Mobile Number </label>
+            <input  name="Mobile" type="number">
+            <label> Update Address </label>
+            <input type="text" name="Address">
+            <label> Update Email </label>
+            <input type="email" name="Email">
+            <label> Update Salary </label>
+            <input type="number" name="Salary">
+            <label> Update Birthday </label>
+            <input type="date" name="Birthdate">
+            <label> Update Department </label>
+                <div>
+                    <input type="radio" value="Manager" name="Department" id="Manager">
+                    <label for="Manager">Manager</label>
+                    <input type="radio" value="Admin" name="Department" id="Admin">
+                    <label for="Admin">Admin</label>
+                </div>
+            <label> Update Gender </label>
+            <div>
+                <input type="radio" value="Male" name="Gender" id="Male">
+                <label for="Male">Male</label>
+                <input type="radio" value="Female" name="Gender" id="Female">
+                <label for="Female">Female</label>
+            </div>
+            <label> Update Marital Statue </label>
+            <div>
+                <input type="radio" value="Married" name="Mstatue" id="Married">
+                <label for="Married">Married</label>
+                <input type="radio" value="Un-Married" name="Mstatue" id="Un-Married">
+                <label for="Un-Married">Un-Married</label>
+            </div>
+            <input type="submit" value="Update">
+            <input type="button" value="Clear">
+        </form>
+    </div>
+</section>
+{% endblock %}

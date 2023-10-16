@@ -1,0 +1,63 @@
+:root {
+	--main-color: rgb(0, 128, 255);
+	--white-color: azure;
+	--shadow-color: rgba(185, 167, 167, 0.134);
+	--raduis-size: 20px;
+}
+
+.container {
+	margin: 2% 15%;
+	padding: 5% auto;
+	font-weight: 600;
+	box-sizing: border-box;
+	font-family: cursive;
+}
+
+section {
+	padding: 20px;
+	box-shadow: 3px 3px 3px var(--shadow-color);
+	border-radius: var(--raduis-size);
+	text-align: center;
+}
+
+label {
+	font-weight: bold;
+	font-size: larger;
+	font-family: sans-serif;
+	color: var(--main-color);
+}
+
+input:not([type="submit"]) {
+	padding: 10px;
+	border: 1.7px solid rgb(232, 229, 229);
+	border-radius: 12.5px;
+	box-shadow: 2px 2px 2px var(--shadow-color);
+	transition: 1s;
+	font-size: 16px;
+	outline: none;
+}
+
+input:not([type="submit"]):hover {
+	box-shadow: -1.5px -2px 2px 0px var(--shadow-color);
+}
+
+input:not([type="submit"]):focus {
+	border: 2.19px solid rgb(177, 174, 174);
+}
+
+.send {
+	background-color: var(--main-color);
+	padding: 10px;
+	font-size: large;
+	border-radius: var(--raduis-size);
+	transition: 0.56s;
+	font-family: cursive;
+	color: var(--white-color);
+	cursor: pointer;
+	border: none;
+}
+
+.send:hover {
+	color: var(--main-color);
+	background-color: var(--white-color);
+}

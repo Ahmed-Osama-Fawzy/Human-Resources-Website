@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/Public.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/Navbar.css') }}">
+    {% block CssFiles%}
+
+    {% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block HRNav %}
+    <nav>
+        <div>
+            <ul class="links">
+                <li>
+                    <div class="logo">
+                        <img src="{{ url_for('static' , filename='images/hr-logo-zip-file (1)/png/logo-no-background.png') }}">
+                    </div>
+                </li>
+                <li> <a href="{{ url_for('HRHome') }}"> Home </a> </li>
+                <li> <a href="{{ url_for('InsertEmployee') }}"> Add Emploee </a> </li>
+                <li> <a href="{{ url_for('ModifyEmployee') }}"> Modify Emploee </a> </li>
+                <li> <a href="{{ url_for('RemoveEmployee') }}"> Remove Emploee </a>  </li>
+                <li> <a href="{{ url_for('SubmitVaction') }}"> Order Vaction  </a>  </li>
+                <li> <a href="{{ url_for('HShowVactions') }}"> Show Vactions  </a>  </li>
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+    {% block MNav %}
+    <nav>
+        <div>
+          <ul class="links">
+              <li>
+                  <div class="logo">
+                      <img src="{{ url_for('static' , filename='images/hr-logo-zip-file (1)/png/logo-no-background.png') }}">
+                  </div>
+              </li>
+              <li> <a href="{{ url_for('MHome') }}"> Home </a> </li>
+              <li> <a href="{{ url_for('InsertHR') }}"> Add HR </a> </li>
+              <li> <a href="{{ url_for('ModifyHR') }}"> Modify HR </a> </li>
+              <li> <a href="{{ url_for('RemoveHR') }}"> Remove HR </a>  </li>
+              <li> <a href="{{ url_for('MShowVactions') }}"> Show Vactions  </a>  </li>
+              <li> <a href="{{ url_for('ShowHRS') }}"> Show HRS  </a> </li>
+              <li> <a href="{{ url_for('ShowEmplyooes') }}"> Show Emplyooes  </a> </li>
+          </ul>
+      </div>
+    </nav>
+    {% endblock %}
+    {% block Body%}
+
+    {% endblock %}
+    <script src="{{ url_for('static' , filename='Js/Main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+:root {
+	--main-color: rgb(0, 128, 255);
+	--white-color: rgb(255, 255, 255);
+	--shadow-color: rgba(190, 186, 186, 0.134);
+	--raduis-size: 20px;
+    --Word : ltr;
+    --Direction : left;
+    --right-shadow: 5px 5px 5px ;
+    --left-shadow: -5px -5px 5px ;
+    --trans-delay: 1s;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+label{
+    margin: 30px;
+    font-size: larger;
+	color: var(--main-color);
+}
+input{
+    margin: 5%;
+    padding: 5%;
+    font-size: larger;
+    width: 80%;
+}
+input:not([type="submit"]) {
+	border: 1.7px solid rgb(232, 229, 229);
+	border-radius: 12.5px;
+	box-shadow: 2px 2px 2px var(--shadow-color);
+	transition: 1s;
+	font-size: 16px;
+	outline: none;
+}
+
+input:hover:not([type="submit"]) {
+	box-shadow: -1.5px -2px 2px 0px var(--shadow-color);
+}
+
+input:focus:not([type="sumbit"]) {
+	border: 2.19px solid rgb(177, 174, 174);
+}
+
+.send {
+	border: none;
+	background-color: var(--main-color);
+	padding: 10px;
+	font-size: large;
+	border-radius: var(--raduis-size);
+	transition: 0.56s;
+	color: var(--white-color);
+}
+
+.send:hover {
+	color: var(--main-color);
+	background-color: var(--white-color);
+}
+
+.Container {
+    direction: var(--Word);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.Container .Father{
+    float: var(--Direction);
+    width: 90%;
+    padding: 2.5%;
+    margin: 2.5%;
+}
+
+h1{
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+@media screen and (min-width:1201px) {
+    .Container .Father .Son{
+        float: var(--Direction);
+        width: 15%;
+        padding: 1%;
+        margin: 1%;
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+    .Container .Father .Son{
+        float: var(--Direction);
+        width: 20%;
+        padding: 1%;
+        margin: 1%;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1024px) {
+    .Container .Father .Son{
+        float: var(--Direction);
+        width: 26.333333333%;
+        padding: 1.5%;
+        margin: 1.5%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:767px) {
+    .Container .Father .Son{
+        float: var(--Direction);
+        width: 41%;
+        padding: 2%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .Container .Father .Son{
+        float: var(--Direction);
+        width: 90%;
+        padding: 2%;
+        margin: 2%;
+    }
+}

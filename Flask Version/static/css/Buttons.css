@@ -1,0 +1,18 @@
+.Son{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: var(--raduis-size);
+    box-shadow: var(--right-shadow) var(--shadow-color);
+    transition: var(--trans-delay);
+}
+
+.Son a {
+    background-color: inherit;
+    color: inherit;
+    font-size: large;
+    text-decoration: none;
+}
+
+.Son:hover{
+    box-shadow: var(--left-shadow) var(--shadow-color);
+}

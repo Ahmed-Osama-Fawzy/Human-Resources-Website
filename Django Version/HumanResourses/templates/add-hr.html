@@ -1,0 +1,44 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+<section class="Two">
+    <div class="Half">
+        <img src="{% static 'image.jpg' %}">
+    </div>
+    <div class="Half">
+        <form method="post">
+            {% csrf_token %}
+            <label> Username </label>
+            <input type="text" name="Username" required>
+            <label> Password </label>
+            <input type="password" name="Password" required>
+            <label> Mobile Number </label>
+            <input  name="Mobile" type="number" required>
+            <label> Address </label>
+            <input type="text" name="Address" required>
+            <label> Email </label>
+            <input type="email" name="Email" required>
+            <label> Salary </label>
+            <input min="1000" max="100000" name="Salary" type="number" required>
+            <label> Birthday </label>
+            <input type="date" name="Birthdate" required>
+            <label> Gender </label>
+            <div>
+                <input type="radio" value="Male" name="Gender" id="Male" required>
+                <label for="Male">Male</label>
+                <input type="radio" value="Female" name="Gender" id="Female" required>
+                <label for="Female">Female</label>
+            </div>
+            <label> Marital Statue </label>
+            <div>
+                <input type="radio" value="Married" name="Mstatue" id="Married" required>
+                <label for="Married">Married</label>
+                <input type="radio" value="Un-Married" name="Mstatue" id="Un-Married" required>
+                <label for="Un-Married">Un-Married</label>
+            </div>
+            <input type="submit" value="Add">
+            <input type="button" value="Clear">
+        </form>
+    </div>
+</section>
+{% endblock %}

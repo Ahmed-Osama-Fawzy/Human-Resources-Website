@@ -1,0 +1,18 @@
+section {
+	width: fit-content;
+	margin: auto;
+	box-shadow: 5px 5px 10px var(--shadow-color);
+	border-radius: var(--raduis-size);
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(252, 253, 253);
+	border: 1.47px solid rgba(232, 229, 229, 0.602);
+}
+section form div {
+	margin: 20px;
+}
+section div img {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+}

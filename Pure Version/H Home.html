@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link rel="stylesheet" href="css/Navbar.css" />
+		<link rel="stylesheet" href="css/HR-Home.css" />
+	</head>
+	<body>
+		<section class="Conatiner">
+			<nav>
+				<ul class="links">
+					<li>
+						<div class="logo">
+							<a href="H Home.html" title="HR-System">
+								<img
+									src="images/hr-logo-zip-file (1)/png/logo-no-background.png"
+								/>
+							</a>
+						</div>
+					</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Add Employee</a></li>
+					<li class="test"><a href="#">List/Search Employee</a></li>
+					<li><a href="#">Edit Employee</a></li>
+					<li><a href="#">Vacations Request</a></li>
+					<li><a href="#">Sign Out</a></li>
+				</ul>
+			</nav>
+			<div><h1>Dashboard</h1></div>
+			<div class="Father">
+				<a href="{{ url_for('InsertEmployee') }}"> Add Emploee </a>
+				<a href="{{ url_for('ModifyEmployee') }}"> Modify Emploee </a>
+				<a href="{{ url_for('RemoveEmployee') }}"> Remove Emploee </a>
+				<a href="{{ url_for('SubmitVaction') }}"> Order Vaction </a>
+				<a href="{{ url_for('ShowVactions') }}"> Show Vactions </a>
+				<a href="#">Profile</a>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+    <section class="Two">
+        <div class="Half">
+            <img src="{% static 'image.jpg' %}">
+        </div>
+        <div class="Half">
+            <form method="post">
+                {% csrf_token %}
+                <label> Employee Username </label>
+                <input name="EmployeeUsername" type="text" required>
+                <label> Department </label>
+                <div>
+                    <input type="radio" value="Manager" name="EmployeeDepartment" id="Manager" required>
+                    <label for="Manager">Manager</label>
+                    <input type="radio" value="Admin" name="EmployeeDepartment" id="Admin" required>
+                    <label for="Admin">Admin</label>
+                </div>
+                <label> Start Date </label>
+                <input type="date" name="Startdate" required>
+                <label> End Date </label>
+                <input type="date" name="Enddate" required>
+                <label> Reason </label>
+                <input type="text" placeholder="Write The Reason of the Vaction" name="Reason" required>
+                <input type="submit" value="Send">
+                <input type="button" value="Clear">
+            </form>
+        </div>
+    </section>
+{% endblock %}

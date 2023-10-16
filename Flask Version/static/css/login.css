@@ -1,0 +1,47 @@
+section {
+	width: fit-content;
+	margin: auto;
+	text-align: center;
+	padding: 5%;
+	background-color: rgb(252, 253, 253);
+	border: 1.47px solid rgba(232, 229, 229, 0.602);
+}
+
+section div form {
+	display: grid;
+}
+
+section div label,
+input,
+h2,
+span {
+	padding: 10px;
+	margin: 0px;
+	border: none;
+}
+
+section div span img {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+}
+
+section div form input {
+	margin: 5px 5px 15px 0px;
+}
+
+section div a:link,
+a:visited {
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+section div a:link:hover {
+	color: #2836cf;
+}
+
+section div h2 {
+	color: rgb(11, 32, 135);
+	font-weight: 900;
+	font-size: 26px;
+}

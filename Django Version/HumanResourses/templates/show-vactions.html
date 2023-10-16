@@ -1,0 +1,41 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+    <section class="One">
+        <div class="X-Full">
+            <h1> Emplooe's Vactions </h1>
+            <form method="post" action="">
+                <input pattern="[a-z][A-Z][0-9]" type="search" placeholder="Search By Id or Username">
+            </form>
+        </div>
+        <div class="Full">
+            <table>
+                <thead>
+                    <th>
+                        <td> VationId </td>
+                        <td> Emploee Name </td>
+                        <td> Employee Department </td>
+                        <td> Strat date </td>
+                        <td> End date </td>
+                        <td> Reason of Vaction </td>
+                        <td> Vaction Staute </td>
+                    </th>
+                </thead>
+                <tbody>
+                    {% for One in data %}
+                        <tr>
+                            <td>  </td>
+                            <td> {{ One.id}} </td>
+                            <td> {{ One.EmployeeUsername}} </td>
+                            <td> {{ One.EmployeeDepartment}} </td>
+                            <td> {{ One.Startdate}}  </td>
+                            <td> {{ One.Enddate}}  </td>
+                            <td> {{ One.Reason}}  </td>
+                            <td> {{ One.Statues}} </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,26 @@
+.content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: var(--main-color);
+	margin: 17px;
+}
+
+.content div {
+	margin: inherit;
+}
+
+.content button {
+	position: relative;
+	left: 89.5%;
+	bottom: -20px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: var(--main-color);
+	color: rgb(252, 253, 253);
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: cursive;
+}

@@ -1,0 +1,37 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Show.css') }}">
+{% endblock %}
+{% block MNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<section class="Container">
+    <div class="Father">
+        <table>
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Name </th>
+                    <th> Start Date  </th>
+                    <th> End Date </th>
+                    <th> Reason </th>
+                    <th> Satuts </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Row in Data%}
+                    <td>
+                        {% for Value in Row %}
+                            <th> {{ Value }} </th>
+                        {% endfor %}
+                    </td>   
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+        </table>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Buttons.css') }}">
+{% endblock %}
+{% block MNav %}
+<div>
+    <ul class="links">
+        <li>
+            <div class="logo">
+                <img src="{{ url_for('static' , filename='images/hr-logo-zip-file (1)/png/logo-no-background.png') }}">
+            </div>
+        </li>
+        <li> Dashboard </li>
+    </ul>
+</div>
+</nav>
+{% endblock %}
+{% block HRNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<section class="Container">
+    <div class="Father">
+        <div class="Son">
+            <a href="{{ url_for('InsertHR') }}"> Add HR </a>
+        </div>
+        <div class="Son">
+            <a href="{{ url_for('ModifyHR') }}"> Modify HR </a>
+        </div>
+        <div class="Son">
+            <a href="{{ url_for('RemoveHR') }}"> Remove HR </a>
+        </div>
+        <div class="Son">
+            <a href="{{ url_for('MShowVactions') }}"> Show Vactions  </a>
+        </div>
+        <div class="Son">
+            <a href="{{ url_for('ShowHRS') }}"> Show HRS  </a>
+        </div>
+        <div class="Son">
+                <a href="{{ url_for('ShowEmplyooes') }}"> Show Emplyooes  </a>
+            </div>
+    </div>
+</section>
+{% endblock %}

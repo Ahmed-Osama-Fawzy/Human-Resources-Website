@@ -1,0 +1,45 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/login.css') }}">
+{% endblock %}
+{% block MNav %}
+<!---->
+{% endblock %}
+{% block HRNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<div class="container">
+	<section>
+		<div>
+			<span>
+				<img src="{{ url_for('static' , filename='images/hr-logo-zip-file (1)/png/logo-no-background.png') }}" />
+			</span>
+			<h2>Log In</h2>
+		</div>
+		<hr />
+		<div>
+			<form>
+				<label class="label" for="Username">Username</label>
+				<input
+					type="text"
+					name="Username"
+					required
+					placeholder="Write Your Username"
+				/>
+				<label class="label" for="password">Password</label>
+				<input
+					type="password"
+					required
+					name="password"
+					placeholder="Write Your password"
+				/>
+				<input type="submit" class="send" value="Send" />
+			</form>
+		</div>
+		<div>
+			<a href=" {{ url_for('ForgetPassword') }}">Forgot Password?</a>
+		</div>
+	</section>
+</div>
+{% endblock %}

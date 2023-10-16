@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'public.css' %} ">
+    <title> {{ title }} </title>
+</head>
+<body>
+    {% if User == 'Admin' and title != 'Admin Home Page' %}
+        <nav class="Admin">
+            <ul>
+                <li>
+                    <a href="{% url 'AdminHome' %}" target="_self"> Home </a>
+                </li>
+                <li>
+                    <a href="{% url 'AddEmploee' %}" target="_self"> Add Employee </a>
+                </li>
+                <li>
+                    <a href="{% url 'UpdateEmploee' %}" target="_self"> Update Employee </a>
+                </li>
+                <li>
+                    <a href="{% url 'RemoveEmploee' %}" target="_self"> Delete Employee </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowEmploees' %}" target="_self"> Show Employees </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowVactions' %}" target="_self"> Show Vactions </a>
+                </li>
+                <li>
+                    <a href="{% url 'OrderVaction' %}" target="_self"> Order Vaction </a>
+                </li>
+            </ul>
+        </nav>
+    {% elif User == 'Owner' and title != 'Manager Home Page' %}
+        <nav class="Owner">
+            <ul>
+                <li>
+                    <a href="{% url 'ManagerHome' %}" target="_self"> Home </a>
+                </li>
+                <li>
+                    <a href="{% url 'AddHR' %}" target="_self"> Add HR </a>
+                </li>
+                <li>
+                    <a href="{% url 'UpdateHR' %}" target="_self"> Update HR </a>
+                </li>
+                <li>
+                    <a href="{% url 'RemoveHR' %}" target="_self"> Delete HR </a>
+                </li>
+                <li>
+                    <a href="{% url 'AcceptionVactions' %}" target="_self"> Vactions </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowEmploees' %}" target="_self"> Show Emploees </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowHRs' %}" target="_self"> Show HRs </a>
+                </li>
+            </ul>
+        </nav>
+    {% else %}
+        <nav>
+
+        </nav>
+    {% endif %}
+    {% block Body %}
+
+    {% endblock %}
+    <footer>
+
+    </footer>
+    <script src="{% static 'main.js' %}"></script>
+    <script>
+        let Chooses = document.querySelectorAll("h1");
+        for(let i=0 ; i < Chooses.length; i++){
+            Chooses[i].addEventListener('click' , function(){
+                if (this.dataset.id == 1){
+                    window.location.assign("/Main")
+                }
+                else{
+                    alert("Sorry This Projet Isnot Done, For Now!")
+                }
+            })
+        }
+    </script>
+</body>

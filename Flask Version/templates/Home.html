@@ -1,0 +1,36 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Home.css') }}">
+{% endblock %}
+{% block MNav %}
+<!---->
+{% endblock %}
+{% block HRNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<section class="Container">
+    <div class="Father">
+		<div class="first">
+			<img src="{{ url_for('static' , filename='images/hr-logo-zip-file (1)/png/logo-no-background.png') }}" />
+		</div>
+		<div class="second">
+			<button id="Log_In"><a href="{{ 'LogIn' }}"> Log In </a></button>
+			<button id="Log_In"><a href="{{ 'HRHome' }}"> HR </a></button>
+			<button id="Log_In"><a href="{{ 'MHome' }}"> Manager </a></button>
+		</div>
+	</div>
+	<div class="Father">
+		<div class="first">
+			<h1>
+				<p>Human</p>
+				<p>Resources</p>
+				<p>System</p>
+			</h1>
+		</div>
+		<div class="second">
+			<img src="{{ url_for('static' , filename='images/background.png') }}" width="100" alt="background" />
+		</div>
+	</div>
+</section>
+{% endblock %}

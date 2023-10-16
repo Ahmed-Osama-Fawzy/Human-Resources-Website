@@ -1,0 +1,21 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+    <nav class="Main">
+        <ul>
+            <li>
+                <img src="{% static 'image.jpg' %}">
+                <a href="{% url 'Main' %}"> HR </a>
+            </li>
+            <li class="Right">
+                <a href="{% url 'Login' %}"> login </a>
+            </li>
+        </ul>
+    </nav>
+    <section class="One">
+        <div class="Full">
+            <h1> <span>H</span>uman <span>R</span>esources <span>W</span>ebSite </h1>
+            <img src="{% static 'image.jpg' %}">
+        </div>
+    </section>
+{% endblock %}

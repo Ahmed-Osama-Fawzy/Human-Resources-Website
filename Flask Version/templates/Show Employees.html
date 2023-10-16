@@ -1,0 +1,41 @@
+{% extends 'Header.html' %}
+{% block CssFiles%}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Show.css') }}">
+{% endblock %}
+{% block MNav %}
+<!---->
+{% endblock %}
+{% block Body %}
+<section class="Container">
+    <div class="Father">
+        <table>
+            <thead>
+                <tr>
+                    <th> UserName </th>
+                    <th> Id </th>
+                    <th> Address </th>
+                    <th> Eamil </th>
+                    <th> Mobile Number </th>
+                    <th> Gender </th>
+                    <th> Marital Status </th>
+                    <th> Salary </th>
+                    <th> Birth Day </th>
+                    <th> # Of Avalible Vactions </th>
+                    <th> Total # Of Vactions </th>
+                    <th> # Of Taken Vactions </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Row in Data %}
+                    <tr>
+                        {% for Item in Row %}
+                            <td> {{ Item }} </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+</section>
+{% endblock %}

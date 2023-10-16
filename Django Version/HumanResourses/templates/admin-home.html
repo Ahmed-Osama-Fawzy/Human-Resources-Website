@@ -1,0 +1,38 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block Body %}
+    <section class="Two">
+        <div class="Half">
+            <img src="{% static 'image.jpg' %}">
+        </div>
+        <div class="Half">
+            <ul>
+                <li>
+                    <h1> Dashboard </h1>
+                </li>
+                <li>
+                    <a href="{% url 'AddEmploee' %}" target="_self"> Add Emploee </a>
+                </li>
+                <li>
+                    <a href="{% url 'UpdateEmploee' %}" target="_self"> Update Emploee </a>
+                </li>
+                <li>
+                    <a href="{% url 'RemoveEmploee' %}" target="_self"> Delete Emploee </a>
+                </li>
+                <li>
+                    <a href="{% url 'OrderVaction' %}" target="_self"> Order Vaction </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowVactions' %}" target="_self"> Show Vactions </a>
+                </li>
+                <li>
+                    <a href="{% url 'ShowEmploees' %}" target="_self"> Show Emploees </a>
+                </li>
+                
+                <li>
+                    <a href="{% url 'ModifyPassword' %}" target="_self"> Modify Password </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

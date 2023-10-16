@@ -1,0 +1,32 @@
+{% extends 'Header.html' %}
+{% block CssFiles %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/Add-Modify.css') }}">
+{% endblock %}
+{% block MNav %}
+<!---->
+{% endblock %}
+{% block Body%}
+<section class="Container">
+    <div class="Father">
+        <form method="POST" action="{{url_for('SubmitVaction')}}">
+            <div class="Son">
+                <label for="Id"> Id </label>
+                <input type="number" id="Id" name="Id" placeholder="Write Id" required>
+            </div>
+            <div class="Son">
+                <label for="Start_Date"> Start Date </label>
+                <input type="date" id="Start_Date" name="Start Date" required>
+            </div>
+            <div class="Son">
+                <label for="End_Date"> End Date </label>
+                <input type="date" id="End_DateEnd_Date" name="EndDate" required>
+            </div>
+            <div class="Son">
+                <label for="Reason"> End Date </label>
+                <textarea name="Reason" id="Reason" placeholder="Write Your Reason">  </textarea>
+            </div>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</section>
+{% endblock %}
